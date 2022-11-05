@@ -6,7 +6,7 @@ print("Welcome to the password generator")
 alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789¬£$%^&*()_+=-[]{}#;:./,|@~!"
 password = ""
 
-# 2. Take input from user how long he wants the password to be
+# 2. Take input from user_input how long he wants the password to be
 print("Please input how long would you like your password to be.")
 user_input = int(input())
 

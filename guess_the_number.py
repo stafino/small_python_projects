@@ -3,7 +3,7 @@ import random
 # 1. Create a random number that will need to be guessed in a specific range
 number_to_be_guessed = random.randint(1, 100)
 print("number to be guessed: ", number_to_be_guessed)
-# 2. Ask user for an input,
+# 2. Ask user_input for an input,
 print("Please guess a number")
 
 # function to check whether the input > 0, if not it doesn't let it through
@@ -26,13 +26,13 @@ user_input = checking_input()
 
 # Loop until the user_input == number_to_be_guessed
 while user_input != number_to_be_guessed:
-    # if user_input < random_number tell user it's low,
+    # if user_input < random_number tell user_input it's low,
     # checking_input() to ensure input > 0
     if checking_input() < number_to_be_guessed:
         print("Guess is low.")
         user_input = int(input("Enter the number you want to guess "))
         continue
-    # if user_input > random_number tell user it's high,
+    # if user_input > random_number tell user_input it's high,
     # checking_input() to ensure input > 0
     elif checking_input() > number_to_be_guessed:
         print("Guess is high.")
