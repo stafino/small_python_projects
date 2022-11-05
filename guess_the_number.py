@@ -1,5 +1,5 @@
-# Plan
 import random
+
 # 1. Create a random number that will need to be guessed in a specific range
 number_to_be_guessed = random.randint(1, 100)
 print("number to be guessed: ", number_to_be_guessed)
@@ -24,6 +24,7 @@ def checking_input():
 # initial guess
 user_input = checking_input()
 
+# Loop until the user_input == number_to_be_guessed
 while user_input != number_to_be_guessed:
     # if user_input < random_number tell user it's low,
     # checking_input() to ensure input > 0
@@ -40,5 +41,5 @@ while user_input != number_to_be_guessed:
     # 5. If he gets it right, the game is won
     else:
         break
-print("You have won!")
+print("You have won! Game over.")
 
