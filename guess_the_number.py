@@ -5,29 +5,35 @@ number_to_be_guessed = random.randint(1, 100)
 print("number to be guessed: ", number_to_be_guessed)
 # 2. Ask user for an input,
 print("Please guess a number")
-user_input = 0
 
-# Making sure the number input is bigger than 0
-while True:
-    try:
-        user_input = int(input("Enter the number you want to guess "))
-    except ValueError:
-        print("Please enter a number > 0")
-        continue
-    if user_input > 0:
-        print(f'You entered: {user_input}')
-        break
-    else:
-        print("Number you are guessing is definitely bigger than 0!")
+# function to check whether the input > 0, if not it doesn't let it through
+def checking_input():
+    while True:
+        try:
+            user_input = int(input("Enter the number you want to guess "))
+        except ValueError:
+            print("Please enter a number > 0")
+            continue
+        if user_input > 0:
+            print(f'You entered: {user_input}')
+            return user_input
+            break
+        else:
+            print("Number you are guessing is definitely bigger than 0!")
+
+# initial guess
+user_input = checking_input()
 
 while user_input != number_to_be_guessed:
-    # 3. If input < random_number tell user
-    if user_input < number_to_be_guessed:
+    # if user_input < random_number tell user it's low,
+    # checking_input() to ensure input > 0
+    if checking_input() < number_to_be_guessed:
         print("Guess is low.")
         user_input = int(input("Enter the number you want to guess "))
         continue
-    # 4. Elif input > random_number tell user
-    elif user_input > number_to_be_guessed:
+    # if user_input > random_number tell user it's high,
+    # checking_input() to ensure input > 0
+    elif checking_input() > number_to_be_guessed:
         print("Guess is high.")
         user_input = int(input("Enter the number you want to guess "))
         continue
@@ -35,5 +41,4 @@ while user_input != number_to_be_guessed:
     else:
         break
 print("You have won!")
-
 
