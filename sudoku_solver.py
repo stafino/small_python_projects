@@ -10,6 +10,7 @@ board = [
     [0,4,9,2,0,6,0,0,7]
 ]
 
+# Try all numbers at the empty square
 # function to print the board with the spaces so it's easy to look at and understand for a human
 def print_board(board):
     for i in range(len(board)):
@@ -28,10 +29,12 @@ def print_board(board):
             else:
                 print(str(board[i][j]) + " ", end=" ")
 
+# Pick an empty Square
 def find_empty_value(board):
     for i in range(len(board)):
         for j in range(len(board[0])):
             if board[i][j] == 0:
                 return i, j     # row, column
+
 
 print_board(board)
