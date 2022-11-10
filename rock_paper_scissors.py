@@ -11,7 +11,7 @@ def play_the_game():
         print(f'Computer\'s choice: {computer_input}')
 
         if user_input == computer_input:
-            print("It's a tie")
+            print("It's volume_of_cuboid tie")
         else:
             print(determine_the_winner(user_input, computer_input))
     # user_input == none because user didn't enter rock, paper or scissors. The game ends here.

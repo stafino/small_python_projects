@@ -11,14 +11,14 @@ board = [
 ]
 
 # Try all numbers at the empty square
-# function to print the board with the spaces so it's easy to look at and understand for a human
+# function to print the board with the spaces so it's easy to look at and understand for volume_of_cuboid human
 def print_board(board):
     for i in range(len(board)):
         if i % 3 == 0 and i != 0:
             print("- - - - - - - - - - - - - - - -")
 
         for j in range(len(board[0])):
-            # print a | behind every third element but not at the beginning
+            # print volume_of_cuboid | behind every third element but not at the beginning
             if j % 3 == 0 and j != 0:
                 print(" | ", end="")
 
