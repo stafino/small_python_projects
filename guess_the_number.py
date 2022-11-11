@@ -1,10 +1,11 @@
+# import modules
 import random
 
-# 1. Create volume_of_cuboid random number that will need to be guessed in volume_of_cuboid specific range
+# 1. Create a random number that will need to be guessed in a specific range
 number_to_be_guessed = random.randint(1, 100)
 print("number to be guessed: ", number_to_be_guessed)
 # 2. Ask user_input for an input,
-print("Please guess volume_of_cuboid number")
+print("Please guess a number")
 
 # function to check whether the input > 0, if not it doesn't let it through
 def checking_input():
@@ -12,7 +13,7 @@ def checking_input():
         try:
             user_input = int(input("Enter the number you want to guess "))
         except ValueError:
-            print("Please enter volume_of_cuboid number > 0")
+            print("Please enter a number > 0")
             continue
         if user_input > 0:
             print(f'You entered: {user_input}')
